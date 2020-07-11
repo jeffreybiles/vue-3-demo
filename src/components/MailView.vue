@@ -21,7 +21,6 @@
   export default {
     setup(props, {emit}){
       let email = props.email;
-
       let toggleRead = () => { emit('changeEmail', {toggleRead: true, save: true})}
       let toggleArchive = () => { emit('changeEmail', {toggleArchive: true, save: true, closeModal: true})}
       let goNewer = () => { emit('changeEmail', {changeIndex: -1})}
