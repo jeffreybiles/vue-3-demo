@@ -5,7 +5,7 @@
 
   <Suspense>
     <template #default>
-      <MailTable />
+      <UseStateClickCounter />
     </template>
     <template #fallback>
       Loading...
@@ -16,11 +16,17 @@
 <script>
 import MailTable from '@/components/MailTable.vue';
 import useEmailSelection from '@/composables/use-email-selection';
+import UseStateClickCounter from '@/components/UseStateClickCounter.vue';
+import UseStateForm from '@/components/UseStateForm.vue';
+import UseStateRandomArray from '@/components/UseStateRandomArray.vue';
 
 export default {
   name: 'App',
   components: {
-    MailTable
+    MailTable,
+    UseStateClickCounter,
+    UseStateForm,
+    UseStateRandomArray
   },
   setup(){
     return {
